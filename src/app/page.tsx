@@ -1,9 +1,13 @@
-import Image from "next/image";
+import { About } from "@/components/About";
+import { NavBar } from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Hello World
+    <main>
+      <NavBar />
+      <div className="sm:mx-96 mx-6 mt-12">
+        <About />
+      </div>
     </main>
   );
 }
