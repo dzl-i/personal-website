@@ -1,13 +1,13 @@
 import { StarsCanvas } from "./Stars"
 import { TypingAnimation } from "./TypingAnimation"
 
-export const About = () => {
+export const Header = () => {
   return (
     <section id="about" className="flex flex-row items-start gap-5">
       <StarsCanvas />
       <div className='flex flex-col justify-center items-center mt-5'>
         <div className='w-5 h-5 rounded-full bg-primary' />
-        <div className='w-1 sm:h-80 h-40 bg-gradient-to-b from-primary' />
+        <div className='w-1 sm:h-60 h-40 bg-gradient-to-b from-primary' />
       </div>
 
       <div>
@@ -18,11 +18,10 @@ export const About = () => {
           I am a Third Year <br className="sm:block hidden" />
           Software Engineering Student at UNSW!
         </p>
-        <div className="mt-8">
+        <div className="mt-12">
           <TypingAnimation />
         </div>
       </div>
-
     </section>
   )
 }
