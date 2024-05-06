@@ -1,26 +1,55 @@
-import { StarsCanvas } from "./Stars"
+"use client"
+
+import Link from "next/link";
 import { TypingAnimation } from "./TypingAnimation"
+import { LinkedinIcon, GithubIcon, MailIcon } from "lucide-react";
+import { Button } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
 
 export const Header = () => {
+  const router = useRouter();
+  const handleDownload = () => {
+    router.push("/resume.pdf");
+  };
+
   return (
-    <section id="header" className="flex flex-row items-start gap-5 sm:h-60 h-44">
-      <StarsCanvas />
-      <div className='flex flex-col justify-center items-center mt-5'>
-        <div className='w-5 h-5 rounded-full bg-primary' />
-        <div className='w-1 sm:h-60 h-44 bg-gradient-to-b from-primary' />
+    <section id="header" className="relative w-full min-h-[calc(100vh-4rem)] flex items-center">
+      <div className="flex flex-row items-start gap-5 h-60">
+        <div className="flex flex-col justify-center items-center mt-5">
+          <div className="w-5 h-5 rounded-full bg-primary" />
+          <div className="w-1 sm:h-80 h-60 bg-gradient-to-b from-primary" />
+        </div>
+
+        <div>
+          <h1 className="sm:text-7xl text-3xl font-extrabold mt-5">
+            Hi! I&apos;m <span className="text-primary">Denzel</span>
+          </h1>
+          <p className="sm:text-3xl text-lg">
+            I am a Third Year <br className="sm:block hidden" />
+            Software Engineering Student at UNSW!
+          </p>
+          <div className="mt-12 h-12">
+            <TypingAnimation />
+          </div>
+          <div className="flex flex-row gap-4 mt-6 items-center">
+            <Link href={"https://github.com/dzl-i"} className="hover:cursor-pointer">
+              <GithubIcon />
+            </Link>
+            <Link href={"https://www.linkedin.com/in/denzel-iskandar"} className="hover:cursor-pointer">
+              <LinkedinIcon />
+            </Link>
+            <Link href={"mailto:denzel.iskandar@gmail.com"} className="hover:cursor-pointer">
+              <MailIcon />
+            </Link>
+            <Button onClick={handleDownload}>
+              Download Résumé
+            </Button>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <h1 className="sm:text-7xl text-3xl font-extrabold mt-5">
-          Hi! I&apos;m <span className="text-primary">Denzel</span>
-        </h1>
-        <p className="sm:text-3xl text-lg">
-          I am a Third Year <br className="sm:block hidden" />
-          Software Engineering Student at UNSW!
-        </p>
-        <div className="mt-12">
-          <TypingAnimation />
-        </div>
+      <div className="absolute sm:bottom-12 bottom-28 w-full flex justify-center items-center">
+        <Link href={"#about"}>Scroll</Link>
       </div>
     </section>
   )
