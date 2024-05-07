@@ -1,12 +1,12 @@
+import { About } from "@/components/About";
 import { Header } from "@/components/Header";
-import { NavBar } from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main>
-      <NavBar />
-      <div className="sm:mx-96 mx-6 sm:mt-20 mt-8 h-auto">
-        <Header />
+    <main className="relative max-w-7xl mx-auto sm:px-16 px-6">
+      <Header />
+      <div className="flex flex-col sm:gap-y-28 gap-y-24">
+        <About />
       </div>
     </main>
   );
