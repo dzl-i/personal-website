@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { TypingAnimation } from "./TypingAnimation"
-import { LinkedinIcon, GithubIcon, MailIcon } from "lucide-react";
+import { LinkedinIcon, GithubIcon, MailIcon, ChevronDownIcon } from "lucide-react";
 import { Button } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 
@@ -13,8 +13,8 @@ export const Header = () => {
   };
 
   return (
-    <section id="header" className="relative w-full min-h-[calc(100vh-4rem)] flex items-center">
-      <div className="flex flex-row items-start gap-5 h-60">
+    <section id="header" className="relative w-full h-screen mx-auto">
+      <div className="absolute h-screen flex flex-row items-center gap-5">
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-primary" />
           <div className="w-1 sm:h-80 h-60 bg-gradient-to-b from-primary" />
@@ -48,8 +48,9 @@ export const Header = () => {
         </div>
       </div>
 
-      <div className="absolute sm:bottom-12 bottom-28 w-full flex justify-center items-center">
-        <Link href={"#about"}>Scroll</Link>
+      <div className="absolute sm:bottom-12 bottom-28 w-full flex flex-row justify-center items-center animate-bounce gap-2">
+        <Link href={"#about"}>View More</Link>
+        <ChevronDownIcon />
       </div>
     </section>
   )
