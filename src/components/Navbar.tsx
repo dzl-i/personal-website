@@ -20,7 +20,7 @@ export const NavBar = () => {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="full"
-      className="justify-start flex flex-wrap"
+      className="justify-start flex flex-wrap fixed"
       classNames={{
         item: [
           "flex",
@@ -51,7 +51,7 @@ export const NavBar = () => {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-8 mx-8">
+      <NavbarContent className="hidden sm:flex gap-8 max-w-6xl mx-auto">
         <NavbarBrand>
           <a className="flex flex-row items-center gap-4" href="/">
             <Image src={LofiIcon} alt="icon" height={32} width={32} />
