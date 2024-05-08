@@ -25,7 +25,7 @@ export const Footer = () => {
           </Link>
         </div>
 
-        <a href="/" className="text-xs text-gray-500 underline mt-8">
+        <a href="#" className="text-xs text-gray-500 underline mt-8">
           Back to Top
         </a>
       </div>
