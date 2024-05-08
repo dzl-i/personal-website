@@ -44,7 +44,7 @@ export const NavBar = () => {
 
       <NavbarContent className="sm:hidden items-center flex flex-shrink">
         <NavbarBrand>
-          <a className="flex flex-row items-center gap-4" href="#">
+          <a className="flex flex-row items-center gap-4" href="/">
             <Image src={LofiIcon} alt="icon" height={32} width={32} />
             <p className="font-bold text-inherit">Denzel | Student at UNSW</p>
           </a>
