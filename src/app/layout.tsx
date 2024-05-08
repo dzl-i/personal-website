@@ -4,8 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { NavBar } from "@/components/Navbar";
 import { StarsCanvas } from "@/components/Stars";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Denzel Iskandar",
@@ -20,12 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={inter.className}>
+      <body>
         <NavBar />
         <StarsCanvas />
         <Providers>
           {children}
         </Providers>
+        <Footer />
       </body>
     </html>
   );
