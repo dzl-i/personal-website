@@ -41,3 +41,18 @@ export const timeline = [
     iconBg: "#ffe600",
   },
 ]
+
+export const currentProjects = [
+  {
+    title: "Encrypted",
+    description: "End-to-End Encrypted Chat Web Application",
+    techStack: ["Express.js", "SocketIO", "Next.js", "Prisma"],
+    picture: "/encrypted.png",
+  },
+  {
+    title: "Insight Trader",
+    description: "A sentiment analysis tool for financial news articles",
+    techStack: ["Python", "Next.js", "AWS Lambda"],
+    picture: "/insighttrader.png",
+  },
+]
