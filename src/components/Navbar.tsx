@@ -13,6 +13,10 @@ export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  }
+
   return (
     <Navbar
       isBordered
@@ -63,11 +67,6 @@ export const NavBar = () => {
             Home
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={pathname == "/about" ? true : false}>
-          <Link href="/about" color={pathname == "/about" ? "primary" : "foreground"}>
-            About
-          </Link>
-        </NavbarItem>
         <NavbarItem isActive={pathname == "/education" ? true : false}>
           <Link href="/education" color={pathname == "/education" ? "primary" : "foreground"}>
             Education
@@ -96,10 +95,11 @@ export const NavBar = () => {
             <Link
               className="w-full"
               color={
-                index === 2 ? "warning" : index === navLinks.length - 1 ? "danger" : "foreground"
+                pathname == item.id ? "primary" : "foreground"
               }
-              href="#"
+              href={item.id}
               size="lg"
+              onClick={handleCloseMenu}
             >
               {item.title}
             </Link>
