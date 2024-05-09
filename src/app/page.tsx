@@ -1,12 +1,18 @@
 import { About } from "@/components/About";
 import { Header } from "@/components/Header";
+import { StarsCanvas } from "@/components/Stars";
+import { Timeline } from "@/components/Timeline";
 
 export default function Home() {
   return (
-    <main className="relative max-w-7xl mx-auto sm:px-16 px-6">
-      <Header />
-      <div className="flex flex-col sm:gap-y-28 gap-y-24">
+    <main className="w-full">
+      <StarsCanvas />
+      <div className="max-w-7xl mx-auto sm:px-16 px-6">
+        <Header />
+      </div>
+      <div className="flex flex-col max-w-7xl mx-auto sm:px-16 px-6 sm:gap-y-24 gap-y-20 mb-12">
         <About />
+        <Timeline />
       </div>
     </main>
   );
