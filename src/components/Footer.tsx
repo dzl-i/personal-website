@@ -5,7 +5,7 @@ import { GithubIcon, LinkedinIcon, MailIcon, InstagramIcon } from "lucide-react"
 
 export const Footer = () => {
   return (
-    <footer id="footer" className="w-full bg-black">
+    <footer id="footer" className="w-full dark:bg-black light:bg-white">
       <Divider />
       <div className="flex flex-col items-center sm:py-12 py-8">
         <p>&copy; {new Date().getFullYear()} Christian Denzel Iskandar</p>
