@@ -67,11 +67,6 @@ export const NavBar = () => {
             Home
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={pathname == "/education" ? true : false}>
-          <Link href="/education" color={pathname == "/education" ? "primary" : "foreground"}>
-            Education
-          </Link>
-        </NavbarItem>
         <NavbarItem isActive={pathname == "/projects" ? true : false}>
           <Link href="/projects" color={pathname == "/projects" ? "primary" : "foreground"}>
             Projects
