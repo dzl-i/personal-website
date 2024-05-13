@@ -10,7 +10,7 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      sm: "750px"
+      sm: "650px"
     },
     extend: {
       backgroundImage: {
