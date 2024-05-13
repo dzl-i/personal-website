@@ -40,6 +40,13 @@ export const Timeline = () => {
                 {item.country}
               </h4>
               <p className="text-xl">{item.summary}</p>
+              <ul className="space-y-2 list-disc mt-5 ml-5">
+                {item.details.map((detail, idx) => (
+                  <li key={`${detail}-${idx}`}>
+                    {detail}
+                  </li>
+                ))}
+              </ul>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
