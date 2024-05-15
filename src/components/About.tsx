@@ -15,14 +15,14 @@ export const About = () => {
         </p>
 
         <div className="flex flex-row justify-center gap-4 mt-6">
-          <Link href={"/education"}>
-            <Button color="primary" variant="shadow">
-              Academic Journey
-            </Button>
-          </Link>
           <Link href={"/skills"}>
             <Button color="primary" variant="shadow">
               What I&apos;ve Learnt
+            </Button>
+          </Link>
+          <Link href={"/contact"}>
+            <Button color="primary" variant="shadow">
+              Contact Me
             </Button>
           </Link>
         </div>
