@@ -2,6 +2,7 @@ import { allProjects } from "@/constants/data";
 import { Button, Chip } from "@nextui-org/react";
 import Image from "next/image";
 import { GithubIcon, SquareArrowOutUpRightIcon } from "lucide-react";
+import Link from "next/link";
 
 export const AllProjects = () => {
   return (
@@ -47,8 +48,8 @@ export const AllProjects = () => {
                   ))}
                 </div>
                 <div className="flex flex-row gap-4 mt-4 items-end">
-                  {item.github === "" ? "" : <Button href={item.github} color="primary" variant="shadow" className="flex flex-shrink"><GithubIcon /> GitHub</Button>}
-                  {item.live === "" ? "" : <Button href={item.github} color="primary" variant="shadow" className="flex flex-shrink"><SquareArrowOutUpRightIcon /> View Demo</Button>}
+                  {item.github === "" ? "" : <Link href={item.github}><Button color="primary" variant="shadow" className="flex flex-shrink"><GithubIcon /> GitHub</Button></Link>}
+                  {item.live === "" ? "" : <Link href={item.live}><Button color="primary" variant="shadow" className="flex flex-shrink"><SquareArrowOutUpRightIcon /> View Demo</Button></Link>}
                 </div>
               </div>
               <div className="flex items-center">
